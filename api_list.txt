@@ -1,0 +1,316 @@
+﻿API
+(1)
+登陆：
+URL：
+method：POST
+参数：
+{ 
+	code：string                      微信wx.login()获取的code
+
+	encryptedData: string       用户敏感信息加密数据
+
+	iv: string                             加密向量
+}
+response：
+
+{
+	 code：string                         响应码
+	 msg:    string                         响应信息
+	uid：
+	uNickName:		用户昵称
+	uavaUrl:[			用户头像
+	               		]
+}
+ (2)
+发布功能
+URL:
+method:	POST
+参数：
+{
+	uid:	string	用户id
+	functionCode:	string     功能描述		
+	locationID:	
+}
+response
+{
+	code:	string	状态码
+	msg:	string	状态信息
+	uid:	string	
+	identity:
+	datatype:	1001	功能			
+	data:[
+		{
+		functionID:	功能ID
+		functioncontent:	功能内容
+		functiondescription:
+		locationID
+		locationdescription:			
+		locationLatitude：   long         纬度
+        		locationLongitude：	 long         经度
+		}
+	        ]
+}
+
+（3）
+发布讨论__文字
+URL：
+method:	POST
+参数：
+{
+	uid:	string
+	discussionCode:	string	讨论内容
+	locationID:		
+}
+response:
+{
+	code:	string
+	msg:	string
+	uid:	stiring
+	identity:
+	datatype:	1002		讨论				
+	data:[
+		discussionID	讨论ID
+		presenttime:	time	当前时间
+		locationID:	讨论地点ID
+		locationLatitude：   long         纬度
+        		locationLongitude：	 long         经度
+		]
+}
+（4）
+上传__图片
+URL：
+method:	POST
+参数：
+{
+	uid:	string
+	locationID:	
+	img_upload_code	
+}
+response:
+{
+	code:	string
+	msg:	string
+	uid:	stiring
+	identity:
+	datatype:	1003		讨论				
+	data:[
+		discussionID	讨论ID
+		imgUrls:[			评论图片
+	              		]	
+		locationID:	讨论地点ID
+		locationLatitude：   long         纬度
+        		locationLongitude：	 long         经度
+		]
+}
+（5）
+评论他人
+URL:
+method:	POST
+参数：
+{
+	uid:	string		评论者id
+	uidor:	string		发起讨论者id
+	discussionID：	string	讨论ID
+	commentCode:	string	评论代码
+	locationID:	
+}
+response:
+{
+	code:	string
+	msg:	string
+	datatype:	1004		评论	
+	commentID	评论ID
+}
+
+（6）
+获取发布历史
+URL:
+method:	POST
+参数：
+{
+	identity:
+	uid:	string	
+	dataType:	string	
+}
+response:
+{
+	code:	string
+	msg:	string
+	uid:	stiring
+	identity:
+	dataType:	1005			####文字+图片
+	data:[
+		discussionID		讨论ID
+				
+		discussionContent:                 	讨论内容
+		locationID			
+		locationLatitude：   long        	纬度
+        		locationLongitude：	 long        经度
+		imgUrls:[
+			"https://123.png",            评论图片URL
+			"https://124.png",
+			]	
+	         ]	
+###########################
+	dataType:	1001
+	data:[
+		{
+		functionID:	功能ID
+		functioncontent:	功能内容
+		functiondescription:
+		locationID
+		locationdescription:			
+		locationLatitude：   long         纬度
+        		locationLongitude：	 long         经度
+		}
+	        ]
+
+}
+（7）
+获取某个地点讨论列表
+URL:
+method:	POST
+参数：
+{	
+	locationID:			
+ 	uid
+}
+response:
+{
+	code:	string
+	msg:	string
+	dataType:	1006
+	data:[
+		{
+                                discussionID:	
+		discussionCode:	讨论代码
+		discussioncontent:	讨论内容
+		uNickName:	string	用户昵称
+		uavaUrl:			用户头像
+	               	
+		imgUrls:[			评论图片
+	              		]	
+		presenttime:	time	当前时间
+		locationID:		
+		locationLatitude：   long         	纬度
+        		locationLongitude：	 long        经度
+                                comment:[
+{
+		commentID:
+		commentcontent:	评论内容
+		uNickName:	string	用户昵称
+		uorNickName:	string	被回复者昵称		
+}
+]
+
+}
+		]
+  	
+}
+（8）
+获取某个地点功能列表
+URL:
+method:	POST
+参数
+{
+	uid
+	locationID
+	dataType: 1001
+}
+response:
+{
+	code:	string
+	msg:	string
+	data:[
+		{
+		functionID:
+		functionCode:	功能代码
+		functioncontent:	功能内容
+		functiondesription:
+		locationID
+		locationLatitude：   long         纬度
+        		locationLongitude：	 long         经度
+		}
+	        ]
+	#################
+}
+(9)认证
+URL:
+method:	POST
+参数：
+{
+	studentID:		string	学号
+	password:		string	
+	uid			string       加密过的openid
+}
+response:
+{
+	code:	string	响应码
+	msg:	string
+	identity:	
+}	
+(10)轮播图片
+URL:
+method:	POST
+参数：
+{
+	uid          string         
+	dataType:   1007    轮播图片请求--我的界面	
+}
+response:
+{
+	code:	string
+	msg:	string
+	imgUrls:[
+		"https://123.png",
+		"https://124.png",		
+		]		
+}
+
+#########################################################
+{
+	uid          string         
+	dataType:   1008    轮播图片请求--地点功能界面	
+}
+response:
+{
+	code:	string
+	msg:	string
+	imgUrls:[
+		"https://123.png",
+		"https://124.png",		
+		]		
+}
+(11)获取所有标记点
+URL:
+method: POST
+参数：
+{
+	uid
+	dataType:       1009
+}
+
+response:
+{
+	code:   string
+	msg:    string
+	locationID:
+	
+}
+(12)删除
+URL:
+method:POST
+参数：
+{
+	dataType:1010  #删除功能
+	uid:
+	
+	dataType:1011  #删除讨论
+	uid
+}
+response:
+{
+	code:   string
+	msg:    string
+	
+}

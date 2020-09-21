@@ -1,0 +1,30 @@
+<!--pages/main/main.wxml-->
+<map
+  id="map"
+  longitude="103.935213"
+  latitude="30.753085"
+  scale="14"
+  controls="{{controls}}"
+  bindcontroltap="controltap"
+  markers="{{markers}}"
+  bindmarkertap="markertap"
+  polyline="{{polyline}}"
+  bindregionchange="regionchange"
+  polygons="{{polygons}}"
+  bindtap='maptap'
+  bindpoitap='poitap'
+  enable-3D=true
+  show-location
+  style="width: 100%; height: 750px;"
+></map>
+<van-dialog id="van-dialog" />
+<van-dialog
+  show="{{show}}"
+  show-cancel-button="true"
+  message="某些功能需要您登陆后才能使用，是否登陆？"
+  confirm-button-open-type="getUserInfo"
+  bind:close="onClose"
+  bind:getuserinfo="getUserInfo"
+  title="提示"
+>
+</van-dialog>

@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "van-tab": "../../dist/tab/index",
+    "van-tabs": "../../dist/tabs/index",
+    "van-dialog": "../../dist/dialog/index",
+    "van-field":"../../dist/field/index",
+    "inputBox": "../../dist/inputBox/inputBox",
+    "wux-fab-button": "../../dist/fab-button/index",
+    "mp-swipe-card": "../../dist/mp-swipe-card/index",
+    "card-item": "components/card-item/index"
+  }
+  
+}

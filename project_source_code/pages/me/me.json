@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-cell": "../../dist/cell/index",
+    "van-tag": "../../dist/tag/index",
+    "van-dialog": "../../dist/dialog/index"
+  }
+}

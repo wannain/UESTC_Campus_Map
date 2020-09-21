@@ -1,0 +1,49 @@
+<view class="container" class="userinfo">
+  <open-data type="userAvatarUrl" class="icon" mode="aspectFit"></open-data>
+    <view class='name-item' >
+        <open-data type="userNickName" class="userinfo-nickname" ></open-data>
+        <van-tag class = "tag" color="#ffe1e1" text-color="#ad0000"  >{{identify}}</van-tag>
+    </view>
+</view>
+
+ <van-cell
+  title="身份认证"
+  icon="aim"
+  bindtap='onAuth'
+  is-link
+/>
+ <van-cell
+  title="历史关注"
+  icon="underway-o"
+   bindtap='onAttention'
+  is-link
+/>
+ <van-cell
+  title="设置"
+  icon="setting-o"
+  bindtap='onSetting'
+  is-link
+/>
+
+
+<!-- 底部轮播图 -->
+<swiper margin-top='20rpx' 
+        autoplay="true" interval="2000" duration="1000" circular="true"> 
+      <block wx:for="{{imageURLs}}"> 
+        <swiper-item> 
+            <image src="{{item}}" class="slide-image" style='width:100%;height:250rpx'   /> 
+        </swiper-item> 
+      </block> 
+</swiper>
+
+ <van-dialog id="van-dialog" />
+<van-dialog
+  show="{{show}}"
+  show-cancel-button="true"
+  message="某些功能需要您登陆后才能使用，是否登陆？"
+  confirm-button-open-type="getUserInfo"
+  bind:close="onClose"
+  bind:getuserinfo="getUserInfo"
+  title="提示"
+>
+</van-dialog>

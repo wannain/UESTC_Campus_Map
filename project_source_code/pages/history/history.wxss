@@ -1,0 +1,6 @@
+/* pages/history/history.wxss */
+.tabs{
+  position: fixed;
+  width: 750rpx;
+  z-index: 999;
+}

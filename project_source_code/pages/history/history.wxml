@@ -1,0 +1,14 @@
+
+<van-tabs bind:click="onTabClick"   class="tabs">
+  <van-tab title="我的评论">
+  </van-tab>
+<van-tab title="我的发布">
+  </van-tab>
+</van-tabs>
+<view wx:if="{{index==0}}">
+我的评论
+</view>
+
+<view wx:if="{{index==1}}">
+我的发布
+</view>

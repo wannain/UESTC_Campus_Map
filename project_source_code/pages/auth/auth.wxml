@@ -1,0 +1,30 @@
+<!--pages/auth/auth.wxml-->
+
+<view class="container" class="userinfo">
+  <open-data type="userAvatarUrl" class="icon" mode="aspectFit"></open-data>
+  <open-data type="userNickName" class="userinfo-nickname" ></open-data>
+</view>
+
+<van-cell-group>
+  <van-field
+    value="{{ username }}"
+    required
+    clearable
+    label="账号"
+    border
+    placeholder="请输入学号"
+    bind:click-icon="onClickIcon"
+    bind:change="onIdChange"
+  />
+
+  <van-field
+    value="{{ password }}"
+    type="password"
+    label="密码"
+    placeholder="请输入密码"
+    required
+    border
+    bind:change="onPasswordChange"
+  />
+</van-cell-group>
+<button bindtap='login' type='primary' style='margin:50rpx;' disabled='{{disabled}}'>开始验证</button>

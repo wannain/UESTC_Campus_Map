@@ -1,0 +1,19 @@
+
+<van-cell-group>
+   <van-field
+    label="位置"
+    placeholder="请输入地点描述(20字以内)"
+    required
+    border="{{true}}"
+  />
+  <van-field
+    label="描述"
+    type="textarea"
+    placeholder="请输入描述(140字以内)"
+    autosize
+    required
+    border="{{ true }}"
+  />
+</van-cell-group>
+<button bindtap='onSendFunc'>发布</button>
+

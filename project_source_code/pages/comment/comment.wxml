@@ -1,0 +1,14 @@
+
+<view class='page'>
+  <textarea class='text' bindinput="input" placeholder="这一刻的想法..." auto-height="true"/>
+    <view class="img-box">
+    <view class="img" wx:for="{{imgs}}" wx:for-item="item" wx:key="*this">
+        <image src="{{item}}" data-index="{{index}}" mode="aspectFill" bindtap="previewImg"></image>
+        <view class="delete-btn" data-index="{{index}}" catchtap="deleteImg">删除</view>
+    </view>
+    <image   class="upload-img-btn" bindtap="chooseImg" wx:if="{{imgs.length<9}}" src='../../images/add.png' ></image>
+    
+    
+ </view>
+  <button bindtap="sendComment" style='margin-right:5px;margin-left:5px ;margin-top:30rpx'>发布</button>
+</view>
