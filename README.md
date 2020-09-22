@@ -8,7 +8,7 @@
 
 ### 整体架构：设计演示如下：
 
-![微信服务端](H:\UESTC_Campus_map\picture\1.jpg)
+![微信服务端](https://github.com/wannain/UESTC_Campus_map/blob/master/picture/***\*?raw=true\****)
 
 | 名称                         | 标识符                   | 说明                                           |
 | ---------------------------- | ------------------------ | ---------------------------------------------- |
