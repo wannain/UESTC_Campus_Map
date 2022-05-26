@@ -8,7 +8,7 @@
 
 ### 整体架构：设计演示如下：
 
-![微信服务端](https://github.com/wannain/picture/blob/master/UESTC_Campus_map/1.jpg)
+![微信服务端](https://s2.loli.net/2022/05/26/eLb9FlIz5N6GQ21.jpg)
 
 | 名称                         | 标识符                   | 说明                                           |
 | ---------------------------- | ------------------------ | ---------------------------------------------- |
@@ -24,7 +24,7 @@
 
 采用MVC软件架构设计，框图演示如下
 
-![客户端](https://github.com/wannain/picture/blob/master/UESTC_Campus_map/2.jpg)
+![客户端](https://s2.loli.net/2022/05/26/nPCWkxVp5F9ulfS.jpg)
 
 ##### 模型（即数据表）
 
@@ -59,7 +59,7 @@
 
 ##### 服务端：
 
-![服务端](https://github.com/wannain/picture/blob/master/UESTC_Campus_map/3.jpg)
+![服务端](https://s2.loli.net/2022/05/26/XZgQnSuai9Py53R.jpg)
 
 | 名称           | 标记符                    | 说明                               |
 | -------------- | ------------------------- | ---------------------------------- |
@@ -74,12 +74,13 @@
 
 登录界面
 
-![登录界面](https://github.com/wannain/picture/blob/master/UESTC_Campus_map/4.jpg)
+![登录界面](https://s2.loli.net/2022/05/26/pdjmfFo2sRix7wI.jpg)
 
 地图界面
 
-![地图界面](https://github.com/wannain/picture/blob/master/UESTC_Campus_map/5.jpg)
+![地图界面](https://s2.loli.net/2022/05/26/o8Jt3ILe7F6Ssdr.jpg)
 
 讨论模块界面
 
-![讨论模块界面](https://github.com/wannain/picture/blob/master/UESTC_Campus_map/6.jpg)
+![讨论模块界面](https://s2.loli.net/2022/05/26/keWSD3FAPGJK6Uf.jpg)
+
